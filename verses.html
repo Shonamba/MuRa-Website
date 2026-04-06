@@ -1,148 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" data-lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All Verses - MudduRamana Manasu | K.C. Shivappa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Kannada:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Verses – MudduRamana Manasu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Kannada:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
-  <nav class="nav" id="mainNav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-kn">ಮುದ್ದು</span>
-        <span class="nav-logo-en">RamanaManasu</span>
-      </a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
-        <a href="verses.html" class="nav-link active" data-i18n="nav_verses">All Verses</a>
-        <a href="about.html" class="nav-link" data-i18n="nav_about">About</a>
-        <a href="favorites.html" class="nav-link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-          Favorites
-        </a>
-      </div>
-          <div class="nav-right">
-      <button class="lang-toggle" id="langToggle" aria-label="Switch language" title="Switch to Kannada">ಕನ್ನಡ</button>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
-      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-kn">ಮುದ್ದುರಾಮನ ಮನಸು</span>
+      <span class="nav-logo-en" data-i18n="nav_logo_sub">MudduRamana Manasu</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html"    class="nav-link"        data-i18n="nav_home">Home</a>
+      <a href="verses.html"   class="nav-link active"  data-i18n="nav_verses">All Verses</a>
+      <a href="about.html"    class="nav-link"        data-i18n="nav_about">About</a>
+      <a href="favorites.html" class="nav-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> <span data-i18n="nav_favorites">Favorites</span></a>
     </div>
-    </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="index.html">Home</a>
-      <a href="verses.html">All Verses</a>
-      <a href="about.html">About</a>
-      <a href="favorites.html">Favorites</a>
-    </div>
-  </nav>
-
-  <div class="page-header">
-    <div class="container">
-      <h1 class="page-header-title" data-i18n="page_verses_title">All Verses</h1>
-      <p class="page-header-sub" data-i18n="page_verses_sub" data-i18n-n="1100">Complete collection of <span id="verseCount">1100</span> verses from MudduRamana Manasu</p>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle">ಕನ್ನಡ</button>
+      <button class="theme-toggle" id="themeToggle">☀️</button>
+      <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
     </div>
   </div>
-
-  <section class="verses-page-section">
-    <div class="container">
-      <!-- FILTERS & SEARCH -->
-      <div class="filters-bar">
-        <div class="filter-search-wrap">
-          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="verseSearch" class="filter-search" placeholder="Search verses..." oninput="filterVerses()" />
-        </div>
-        <div class="filter-group">
-          <label>Jump to verse:</label>
-          <input type="number" id="jumpVerse" class="filter-number" placeholder="1-1100" min="1" max="1100" />
-          <button class="btn-small" onclick="jumpToVerse()" data-i18n="filter_jump_go">Go</button>
-        </div>
-        <div class="filter-group">
-          <label>Theme:</label>
-          <select id="themeFilter" class="filter-select" onchange="filterVerses()">
-            <option value="" data-i18n="filter_theme_all">All Themes</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label>Chapter:</label>
-          <select id="chapterFilter" class="filter-select" onchange="filterVerses()">
-            <option value="" data-i18n="filter_chapter_all">All Chapters</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label>Sort:</label>
-          <select id="sortOrder" class="filter-select" onchange="filterVerses()">
-            <option value="asc" data-i18n="filter_sort_asc">1 → 1100</option>
-            <option value="desc" data-i18n="filter_sort_desc">1100 → 1</option>
-          </select>
-        </div>
-        <button class="btn-small btn-clear" onclick="clearFilters()" data-i18n="filter_clear">Clear</button>
-      </div>
-
-      <div class="results-info" id="resultsInfo">Showing all 1100 verses</div>
-
-      <!-- VERSE GRID -->
-      <div class="verses-list" id="versesList">
-        <!-- Populated by JS -->
-      </div>
-
-      <!-- PAGINATION -->
-      <div class="pagination" id="pagination"></div>
-    </div>
-  </section>
-
-  <!-- VERSE MODAL -->
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-    <div class="modal" id="verseModal">
-      <button class="modal-close" onclick="closeModalDirect()">&times;</button>
-      <div class="modal-content" id="modalContent"></div>
-      <div class="modal-nav">
-        <button class="modal-nav-btn" id="prevBtn" onclick="navigateModal(-1)">← Previous</button>
-        <button class="modal-nav-btn" id="nextBtn" onclick="navigateModal(1)">Next →</button>
-      </div>
-    </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html"     data-i18n="nav_home">Home</a>
+    <a href="verses.html"    data-i18n="nav_verses">All Verses</a>
+    <a href="about.html"     data-i18n="nav_about">About</a>
+    <a href="favorites.html" data-i18n="nav_favorites">Favorites</a>
   </div>
+</nav>
 
-  <footer class="footer">
+<div class="page-header">
+  <div class="container">
+    <h1 class="page-header-title" data-i18n="page_verses_title">All Verses</h1>
+    <p class="page-header-sub" data-i18n="page_verses_sub" data-i18n-n="1100">Complete collection of 1100 verses from MudduRamana Manasu</p>
+  </div>
+</div>
+
+<section class="verses-page-section">
+  <div class="container">
+    <div class="filters-bar">
+      <div class="filter-search-wrap">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="verseSearch" class="filter-search" data-i18n="filter_search_ph" data-i18n-attr="placeholder" placeholder="Search verses…" oninput="filterVerses()"/>
+      </div>
+      <div class="filter-group">
+        <label data-i18n="filter_jump_label">Jump to verse:</label>
+        <input type="number" id="jumpVerse" class="filter-number" data-i18n="filter_jump_ph" data-i18n-attr="placeholder" placeholder="1–1100" min="1" max="1100"/>
+        <button class="btn-small" onclick="jumpToVerse()" data-i18n="filter_jump_go">Go</button>
+      </div>
+      <div class="filter-group">
+        <label data-i18n="filter_theme_label">Theme:</label>
+        <select id="themeFilter" class="filter-select" onchange="filterVerses()">
+          <option value="" data-i18n="filter_theme_all">All Themes</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label data-i18n="filter_chapter_label">Chapter:</label>
+        <select id="chapterFilter" class="filter-select" onchange="filterVerses()">
+          <option value="" data-i18n="filter_chapter_all">All Chapters</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label data-i18n="filter_sort_label">Sort:</label>
+        <select id="sortOrder" class="filter-select" onchange="filterVerses()">
+          <option value="asc"  data-i18n="filter_sort_asc">1 → 1100</option>
+          <option value="desc" data-i18n="filter_sort_desc">1100 → 1</option>
+        </select>
+      </div>
+      <button class="btn-small btn-clear" onclick="clearFilters()" data-i18n="filter_clear">Clear</button>
+    </div>
+    <div class="results-info" id="resultsInfo"></div>
+    <div class="verses-list" id="versesList"></div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+</section>
+
+<footer class="footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
         <span class="footer-brand-logo">ಮುದ್ದುರಾಮನ ಮನಸು</span>
         <span class="footer-brand-logo-en">MudduRamana Manasu</span>
-        <p data-i18n="footer_brand_desc">A comprehensive digital repository dedicated to preserving and sharing the profound wisdom of K.C. Shivappa's MudduRamana Manasu — freely accessible to all lovers of Kannada literature.</p>
+        <p data-i18n="footer_brand_desc">A comprehensive digital repository for K.C. Shivappa's MudduRamana Manasu.</p>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_quick_links">Quick Links</h4>
-        <a href="index.html" data-i18n="footer_link_home">Home</a>
-        <a href="verses.html" data-i18n="footer_link_verses">All Verses</a>
-        <a href="favorites.html" data-i18n="footer_link_favs">My Favorites</a>
-        <a href="about.html" data-i18n="footer_link_book">About the Book</a>
-        <a href="about.html#author" data-i18n="footer_link_author">About K.C. Shivappa</a>
+        <a href="index.html"        data-i18n="footer_lnk_home">Home</a>
+        <a href="verses.html"       data-i18n="footer_lnk_verses">All Verses</a>
+        <a href="favorites.html"    data-i18n="footer_lnk_favs">My Favorites</a>
+        <a href="about.html"        data-i18n="footer_lnk_book">About the Book</a>
+        <a href="about.html#author" data-i18n="footer_lnk_author">About K.C. Shivappa</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_resources">Resources</h4>
-        <a href="verses.html" data-i18n="footer_res_search">Search Verses</a>
-        <a href="verses.html" data-i18n="footer_res_theme">Browse by Theme</a>
-        <a href="verses.html" data-i18n="footer_res_chapter">Browse by Chapter</a>
+        <a href="verses.html"          data-i18n="footer_res_search">Search Verses</a>
+        <a href="verses.html"          data-i18n="footer_res_theme">Browse by Theme</a>
+        <a href="verses.html"          data-i18n="footer_res_chapter">Browse by Chapter</a>
         <a href="about.html#tradition" data-i18n="footer_res_trad">Kannada Tradition</a>
         <a href="about.html#repository" data-i18n="footer_res_site">About This Site</a>
       </div>
     </div>
-    <hr class="footer-divider" />
+    <hr class="footer-divider"/>
     <div class="footer-bottom">
-      <div class="footer-bottom-left">
-        <span data-i18n="footer_made_with">Made with</span> <span class="footer-heart">♥</span> <span data-i18n="footer_for">for Kannada literature</span>
-      </div>
+      <div class="footer-bottom-left"><span data-i18n="footer_made_with">Made with</span> <span class="footer-heart">♥</span> <span data-i18n="footer_for_lit">for Kannada literature</span></div>
       <div class="footer-bottom-right" data-i18n="footer_copy">© 2026 MudduRamana Manasu Digital Repository. All rights reserved.</div>
     </div>
   </div>
 </footer>
 
-  <script src="data.js"></script>
-  <script src="i18n.js"></script>
-  <script src="app.js"></script>
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="verseModal">
+    <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+    <div class="modal-content" id="modalContent"></div>
+    <div class="modal-nav">
+      <button class="modal-nav-btn" id="prevBtn" onclick="navigateModal(-1)">← Previous</button>
+      <button class="modal-nav-btn" id="nextBtn" onclick="navigateModal(1)">Next →</button>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
