@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MudduRamana Manasu - Complete 1100 Verses | K.C. Shivappa</title>
+  <meta name="description" content="Discover all 1100 verses of MudduRamana Manasu by K.C. Shivappa. Free online repository of Kannada literature." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Kannada:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-kn">ಮುದ್ದುರಾಮನ ಮನಸು</span>
+      <span class="nav-logo-en">MudduRamana Manasu</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="verses.html" class="nav-link">All Verses</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="favorites.html" class="nav-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        Favorites
+      </a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language" title="Switch to Kannada">ಕನ್ನಡ</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="verses.html" data-i18n="nav_verses">All Verses</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="favorites.html" data-i18n="nav_favorites">Favorites</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-lotus hero-lotus-1">🪷</div>
+    <div class="hero-lotus hero-lotus-2">🪷</div>
+    <div class="hero-lotus hero-lotus-3">🪷</div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-subtitle-top" data-i18n="hero_subtitle">ಕನ್ನಡ ಸಾಹಿತ್ಯದ ಅಮೂಲ್ಯ ರತ್ನ</p>
+    <h1 class="hero-title">
+      <span class="hero-title-kn">ಮುದ್ದುರಾಮನ ಮನಸು</span>
+      <span class="hero-title-en" data-i18n="hero_title_en">MudduRamana Manasu</span>
+    </h1>
+    <p class="hero-author">by <strong>K.C. Shivappa</strong></p>
+    <p class="hero-desc" data-i18n="hero_desc">A profound collection of 1100 four-line verses exploring devotion, the human heart, and the eternal quest for meaning.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">1100</span><span class="hero-stat-label" data-i18n="stat_verses">Verses</span></div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat"><span class="hero-stat-num">18</span><span class="hero-stat-label" data-i18n="stat_chapters">Chapters</span></div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat"><span class="hero-stat-num">38</span><span class="hero-stat-label" data-i18n="stat_themes">Themes</span></div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat"><span class="hero-stat-num" data-i18n="stat_access">Free</span><span class="hero-stat-label" data-i18n="stat_access_lbl">Access</span></div>
+    </div>
+    <div class="hero-cta">
+      <a href="verses.html" class="btn-primary" data-i18n="cta_read">Read All Verses</a>
+      <a href="#featured" class="btn-secondary" data-i18n="cta_explore">Explore Featured</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </div>
+</section>
+
+<section class="search-section">
+  <div class="container">
+    <div class="search-box">
+      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="heroSearch" class="search-input" data-i18n="search_placeholder" data-i18n-attr="placeholder" placeholder="Search verses by keyword, theme, or verse number..." />
+      <button class="search-btn" onclick="doSearch()" data-i18n="search_btn">Search</button>
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+  <div class="container">
+    <h2 class="section-title" data-i18n="features_title">Complete MudduRamana Manasu Experience</h2>
+    <p class="section-subtitle" data-i18n="features_subtitle">Explore K.C. Shivappa's timeless wisdom through our comprehensive digital platform</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📜</div>
+        <h3 data-i18n="feat1_title">1100 Complete Verses</h3>
+        <p>Full collection with original Kannada script, transliteration, and detailed meanings for every verse.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3 data-i18n="feat2_title">Search &amp; Filter</h3>
+        <p>Find verses by theme, chapter, keyword, or verse number — perfect for students and researchers.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">❤️</div>
+        <h3 data-i18n="feat3_title">Save Favorites</h3>
+        <p>Like and bookmark your favourite verses. Build your personal collection of meaningful wisdom.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌓</div>
+        <h3 data-i18n="feat4_title">Light &amp; Dark Mode</h3>
+        <p>Read comfortably any time of day with beautiful themes designed for Kannada script.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-section" id="featured">
+  <div class="container">
+    <h2 class="section-title" data-i18n="featured_title">Featured Verses</h2>
+    <p class="section-subtitle" data-i18n="featured_subtitle">Begin your journey with these timeless verses</p>
+    <div class="verses-grid" id="featuredGrid"></div>
+    <div class="featured-cta">
+      <a href="verses.html" class="btn-primary" data-i18n="featured_cta">Explore All 1100 Verses →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT DUO SECTION -->
+<section class="about-duo-section">
+  <div class="container">
+    <h2 class="section-title" data-i18n="about_duo_title">About the Work &amp; the Poet</h2>
+    <p class="section-subtitle" data-i18n="about_duo_subtitle">The book and the voice behind it</p>
+    <div class="about-duo-grid">
+      <div class="about-duo-card">
+        <div class="about-duo-card-icon">📚</div>
+        <div class="about-duo-card-label">The Work</div>
+        <h3>MudduRamana Manasu</h3>
+        <span class="highlight-line">ಮುದ್ದುರಾಮನ ಮನಸು — The Heart of Beloved Rama</span>
+        <p>MudduRamana Manasu is a collection of 1100 four-line verses (chatushpadi) in the grand tradition of Kannada philosophical poetry. Each verse is a standalone meditation — on devotion, nature, love, fate, and the mystery of existence.</p>
+        <p>Organised across 18 chapters — from <em>ಗುರುವೆನಗೆ ಶ್ರೀರಕ್ಷೆ</em> (Blessing of the Guru) to <em>ಮೌನ ಸುಂದರ ಭಾಷೆ</em> (The Beauty of Silence) — the work moves through the full range of human experience with rare lyrical grace.</p>
+        <a href="about.html#book" class="btn-outline">Read More →</a>
+      </div>
+      <div class="about-duo-card">
+        <div class="about-duo-card-icon">✍️</div>
+        <div class="about-duo-card-label">The Poet</div>
+        <h3>K.C. Shivappa</h3>
+        <span class="highlight-line">ಕೆ.ಸಿ. ಶಿವಪ್ಪ — Poet, Philosopher, Kannada Voice</span>
+        <p>K.C. Shivappa is the author of MudduRamana Manasu, a distinguished contribution to modern Kannada literary tradition. Following in the footsteps of great poet-philosophers like D.V. Gundappa, Shivappa brings a deeply personal and reflective voice to the four-line verse form.</p>
+        <p>His verses move between classical Kannada resonance and everyday clarity — making profound philosophical thought accessible to all readers, from scholars to the common person seeking meaning.</p>
+        <a href="about.html#author" class="btn-outline">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RANDOM VERSE SPOTLIGHT -->
+<section class="about-snippet">
+  <div class="container">
+    <div class="about-snippet-inner">
+      <div class="about-snippet-text">
+        <p class="about-label" data-i18n="rand_label">Verse of the Moment</p>
+        <h2 data-i18n="rand_title">A Random Verse</h2>
+        <p>Each reading of MudduRamana Manasu opens a new door. Click the verse to read its full transliteration and meaning, or discover another.</p>
+        <p>Like the best philosophical poetry, these verses grow with you — their meaning deepening with every re-reading as life brings new experience.</p>
+        <button class="btn-outline" onclick="renderRandomVerse()" data-i18n="rand_btn">Another Verse →</button>
+      </div>
+      <div class="about-snippet-verse">
+        <div class="verse-card-large" id="randomVerse"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-brand-logo">ಮುದ್ದುರಾಮನ ಮನಸು</span>
+        <span class="footer-brand-logo-en">MudduRamana Manasu</span>
+        <p data-i18n="footer_brand_desc">A comprehensive digital repository dedicated to preserving and sharing the profound wisdom of K.C. Shivappa's MudduRamana Manasu — freely accessible to all lovers of Kannada literature.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_quick_links">Quick Links</h4>
+        <a href="index.html" data-i18n="footer_link_home">Home</a>
+        <a href="verses.html" data-i18n="footer_link_verses">All Verses</a>
+        <a href="favorites.html" data-i18n="footer_link_favs">My Favorites</a>
+        <a href="about.html" data-i18n="footer_link_book">About the Book</a>
+        <a href="about.html#author" data-i18n="footer_link_author">About K.C. Shivappa</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_resources">Resources</h4>
+        <a href="verses.html" data-i18n="footer_res_search">Search Verses</a>
+        <a href="verses.html" data-i18n="footer_res_theme">Browse by Theme</a>
+        <a href="verses.html" data-i18n="footer_res_chapter">Browse by Chapter</a>
+        <a href="about.html#tradition" data-i18n="footer_res_trad">Kannada Tradition</a>
+        <a href="about.html#repository" data-i18n="footer_res_site">About This Site</a>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <span data-i18n="footer_made_with">Made with</span> <span class="footer-heart">♥</span> <span data-i18n="footer_for">for Kannada literature</span>
+      </div>
+      <div class="footer-bottom-right" data-i18n="footer_copy">© 2026 MudduRamana Manasu Digital Repository. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="verseModal">
+    <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+    <div class="modal-content" id="modalContent"></div>
+    <div class="modal-nav">
+      <button class="modal-nav-btn" id="prevBtn" onclick="navigateModal(-1)">← Previous</button>
+      <button class="modal-nav-btn" id="nextBtn" onclick="navigateModal(1)">Next →</button>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
